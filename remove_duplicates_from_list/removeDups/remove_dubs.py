@@ -62,6 +62,6 @@ user_input = input('Please enter a list of values separated by coma: ')
 user_list = user_input.split(',')
 norm_list = [x.strip(' ') for x in user_list]
 
-sorted_list = list_filter_2(norm_list)
+sorted_list = list_filter_3(norm_list)
 print('Cleaned list(duplicates removed): ',sorted_list)
 print(len(user_list)-len(sorted_list), 'duplicate(s) were removed')
