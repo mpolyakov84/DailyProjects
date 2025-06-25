@@ -1,5 +1,4 @@
 import timeit
-import remove_dubs
 
 test_list = ['1','wer','34','qw','one', 'tre', ' sfe', ' zwef', '23', 'qw', 'test', 'pet', 'cat', 'cat', 'reay', '2',
              '2','wer','34','qw','one', 'tre', ' sfe', ' zwef', '23', 'qw', 'test', 'pet', 'cat', 'cat', 'reay', '2',
@@ -15,7 +14,7 @@ def list_filter_1(seq):
       return sorted_list
 
 '''
-stmt1 ='list_filter_1(test_list)'
+stmt1 =f'list_filter_1({test_list})'
 
 setup2 = '''
 def list_filter_2(seq):
@@ -43,7 +42,7 @@ def list_filter_2(seq):
       return seq
 
 '''
-stmt2 ='list_filter_2(test_list)'
+stmt2 =f'list_filter_2({test_list})'
 
 setup3 = '''
 def list_filter_3(seq):
@@ -59,8 +58,8 @@ def list_filter_3(seq):
 
       return result_list
 '''
-stmt3 ='list_filter_3(test_list)'
+stmt3 =f'list_filter_3({test_list})'
 
-print('Timing func1 : ', timeit.timeit(stmt1, setup=setup1, number=10000))
-print('Timing func2 : ', timeit.timeit(stmt2, setup=setup2, number=10000))
-print('Timing func3 : ', timeit.timeit(stmt3, setup=setup3, number=10000))
+print('Timing func1 : ', timeit.timeit(stmt1, setup=setup1, number=100000))
+print('Timing func2 : ', timeit.timeit(stmt2, setup=setup2, number=100000))
+print('Timing func3 : ', timeit.timeit(stmt3, setup=setup3, number=100000))
