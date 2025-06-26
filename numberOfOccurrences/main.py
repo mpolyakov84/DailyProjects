@@ -32,5 +32,3 @@ for num in norm_list:
 
 # print(norm_list, chosen_number, counter)
 print(f'The number {chosen_number} appears {counter} times in the list. ')
-
-# TODO: Add tests
