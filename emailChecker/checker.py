@@ -1,6 +1,5 @@
 #app checks if an email address is valid using regex in Python
 import re
-# TODO: unittest
 
 def check_email(email):
     pattern = r"^[\w._+-]+@[\w_+-]+\.[\w_+-]+$"
