@@ -19,4 +19,3 @@ def user_interaction():
         else:
             print('That\'s not a valid email address!')
 
-user_interaction()
