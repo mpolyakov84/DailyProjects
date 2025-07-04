@@ -3,7 +3,7 @@ import unittest
 import re
 
 
-# NOTACTUAL: check send_email - negative/positive
+# NOT ACTUAL: check send_email - negative/positive
 
 
 def check_email(email):
@@ -12,6 +12,7 @@ def check_email(email):
         return True
     else:
         return False
+
 
 class TestMailSender(unittest.TestCase):
 
@@ -22,7 +23,6 @@ class TestMailSender(unittest.TestCase):
     def test_recipients_list(self):
         result = mail_sender.get_recipient_list()
         self.assertIsNotNone(result)
-
 
     def test_check_emails(self):
         recipients = mail_sender.get_recipient_list()
