@@ -54,8 +54,3 @@ def main():
         '''
         send_email(recipient, subject, body)
 
-
-# TODO: authentication and func for password - DONE
-# TODO: Read emails from csv - DONE
-# TODO: Send emails to recipients - DONE
-# TODO: Write unit tests
