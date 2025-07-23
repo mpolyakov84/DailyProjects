@@ -5,12 +5,13 @@ def search_names(name='John'):
     :return: list of full names
     """
     result = list()
-    with open('names.txt','r') as f:
+    with open('names.txt', 'r') as f:
         names = f.read().splitlines()
     for itm in names:
         if name.lower() == itm.strip('\n').split()[0].lower():
             result.append(itm)
     return result
+
 
 def user_interaction():
     """
@@ -26,3 +27,5 @@ def user_interaction():
         print(f'There are all the names starting with: \'{input_name}\'')
         for name in result:
             print(name)
+
+    return result
