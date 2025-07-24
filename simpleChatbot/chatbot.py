@@ -1,6 +1,6 @@
 # App is a Simple Python Chatbot That Talks BackBuild a Simple Python Chatbot That Talks Back
 
-def input_analyzer(mes='d'):
+def input_analyzer(mes):
     """
     Func analyse str and return required answer
     :param mes: str - input from user
@@ -8,7 +8,7 @@ def input_analyzer(mes='d'):
     """
     input_list = mes.lower().split()
 
-    greeting_list = ['hi', 'hello']
+    greeting_list = ['hi', 'hello', 'hello!', 'hi!']
     farewell_list = ['exit', 'quit', 'q', 'bye']
 
     if any(x in input_list for x in greeting_list):
@@ -34,7 +34,8 @@ def chatbot():
         bot_answer = input_analyzer(user_input)
 
         if bot_answer is None:
-            break
+            return 'Test'
+            # break
+
         else:
             print(bot_answer)
-
