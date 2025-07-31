@@ -31,3 +31,4 @@ def user_interaction():
     write_quote(user_input)
     quotes = read_quotes()
     print('Saved and loaded quote: \n', quotes)
+    return quotes
