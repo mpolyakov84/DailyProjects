@@ -1,6 +1,8 @@
 # App write and read to CSV contacts
 import csv
-#TODO - logging
+import logging
+logger = logging.getLogger(__name__)
+
 
 
 def csv_writer(data):
@@ -9,12 +11,15 @@ def csv_writer(data):
         writer.writerow(['name', 'telephone', 'email'])
         writer.writerow(data)
         print('Contact saved')
+        logger.info(f'{data} contact has been added to contacts.csv')
 
 
 def csv_reader():
     with open('contacts.csv', 'r', encoding='utf-8') as csvfile:
         data = csv.reader(csvfile)
+        logger.info('Data has been read from contacts.csv')
         return list(data)
+
 
 
 def user_interaction():
