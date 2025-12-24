@@ -1,5 +1,8 @@
 from pathlib import Path
 import csv
+import logging
+
+logger = logging.getLogger(__name__)
 
 cash_path = Path('cash.txt')
 
@@ -13,6 +16,7 @@ except FileExistsError:
     print('Cash file already exists')
 else:
     print('Cash file has been created')
+
 
 # write with join
 # with open(cash_path, 'a+') as file:
@@ -33,6 +37,8 @@ def update_cash_data(data):
         for row in data:
             csv_writer.writerow(row)
 
+        logger.info('Cash data has been updated')
+
 
 def get_cash_data():
     """
@@ -44,4 +50,5 @@ def get_cash_data():
         lst = []
         for row in reader:
             lst.append(row)
+    logger.info('Cash data has been loaded')
     return lst

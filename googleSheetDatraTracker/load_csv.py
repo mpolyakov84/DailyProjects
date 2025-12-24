@@ -1,4 +1,6 @@
 import gspread
+import logging
+logger = logging.getLogger(__name__)
 
 
 def get_csv_data():
@@ -12,4 +14,5 @@ def get_csv_data():
     worksheet1 = spreadsheet.worksheet('Sheet1')
 
     data = worksheet1.get_all_values()
+    logger.info('Data has been loaded from Google Sheet')
     return data
